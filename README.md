@@ -24,11 +24,12 @@ Crypto Bet is a revolutionary prediction market platform built on Solana that br
 
 ---
 
-## 🏗️ **Architecture Overview**
+## 🏗️ **Planned Architecture**
 
 ### **Smart Contract (Anchor/Rust)**
+*To be implemented in Phase 2*
 ```
-crypto-bet/program/src/lib.rs
+crypto-bet/program/src/lib.rs (planned)
 ├── Dual-mode market support (SOL + USDC)
 ├── Secure 1:1 share mechanics
 ├── Authority-controlled market resolution
@@ -37,8 +38,9 @@ crypto-bet/program/src/lib.rs
 ```
 
 ### **Frontend (Next.js 14 + TypeScript)**
+*To be implemented in Phases 2-3*
 ```
-src/
+src/ (planned)
 ├── Landing page with hero section and navigation
 ├── Markets app with comprehensive wallet integration  
 ├── Dual-mode UI with persistent state (Degen 🚀 vs Stable 🏦)
@@ -86,94 +88,64 @@ Any token → Betting token (with 0.3% platform fee)
 
 ---
 
-## 🔧 **Technical Features**
+## 🔧 **Planned Technical Features**
 
-### **Smart Contract Security**
-- ✅ **Authority Controls**: Only designated authorities can resolve markets
-- ✅ **Math Safety**: All operations use checked arithmetic
-- ✅ **Double-Claim Prevention**: Shares zeroed after claiming
-- ✅ **Time Controls**: Betting deadlines and resolution windows
-- ✅ **Account Security**: Secure PDA derivation and validation
+### **Smart Contract Security** *(Phase 2 Implementation)*
+- 📋 **Authority Controls**: Only designated authorities can resolve markets
+- 📋 **Math Safety**: All operations use checked arithmetic
+- 📋 **Double-Claim Prevention**: Shares zeroed after claiming
+- 📋 **Time Controls**: Betting deadlines and resolution windows
+- 📋 **Account Security**: Secure PDA derivation and validation
 
-### **Market Mechanics**
-- ✅ **Market States**: Active → Resolved/Cancelled
-- ✅ **Position Tracking**: Individual user positions per market
-- ✅ **Event Emission**: Real-time updates via Solana events
-- ✅ **Refund System**: Full refunds for cancelled markets
+### **Market Mechanics** *(Phase 2-3 Implementation)*
+- 📋 **Market States**: Active → Resolved/Cancelled
+- 📋 **Position Tracking**: Individual user positions per market
+- 📋 **Event Emission**: Real-time updates via Solana events
+- 📋 **Refund System**: Full refunds for cancelled markets
 
-### **Frontend Features**
+### **Implementation Roadmap**
 
-**✅ Enterprise Infrastructure Complete:**
-- ✅ **Smart Contract**: Secure dual-mode betting with comprehensive security
-- ✅ **Enterprise Security**: 5-layer security system with 0 vulnerabilities (13KB infrastructure)
-- ✅ **Performance Optimization**: Enterprise-grade performance with monitoring hooks
-- ✅ **Automation Scripts**: Comprehensive security, performance, and deployment audits
-- ✅ **Component Architecture**: Complete component structure and organization
-- ✅ **Build System**: Next.js 14, TypeScript, Tailwind CSS, optimized configuration
+**📋 Phase 2: Core Development (Weeks 4-8)**
+- Smart contract development with security measures
+- Database and API implementation
+- Frontend foundation setup
+- Wallet integration framework
 
-**🚧 Frontend Functionality (Major Work Needed):**
-- 🔧 **UI Fixes**: Performance/security infrastructure changes broke existing UI
-- 🔧 **Jupiter Swap Testing**: Need to verify token conversion functionality works
-- 🔧 **Betting Functions**: Test market creation, placing bets, claiming winnings
-- 🔧 **Wallet Integration**: Ensure wallet connectivity works with current setup
-- 🔧 **Landing Page**: Implement new UI design ideas and fix current issues
-- 🔧 **Markets Page**: Build functional betting interface from scratch
-- 🔧 **Smart Contract Integration**: Connect all UI components to betting functions
-- 🔧 **Real-time Data**: Implement live market updates and user positions
+**📋 Phase 3: Integration & Testing (Weeks 9-11)**
+- Jupiter swap integration
+- UI/UX implementation
+- Comprehensive testing suite
+- Security audits and optimization
 
 ---
 
-## 🚀 **Quick Start**
+## 🚀 **Getting Started**
 
-### **Prerequisites**
+### **Repository Overview**
 ```bash
-# Install dependencies
+# Clone the repository
+git clone https://github.com/felipeldfonseca/crypto-bet.git
+cd crypto-bet
+
+# Explore the documentation
+ls docs/          # Browse organized documentation
+cat TODO.md       # View 12-week development roadmap
+```
+
+### **Development Prerequisites** *(For Phase 2 Implementation)*
+```bash
+# Required for development when implementation begins
 node >= 18.0.0
 npm >= 8.0.0
 anchor >= 0.29.0
 solana-cli >= 1.16.0
 ```
 
-### **Installation**
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/crypto-bet.git
-cd crypto-bet
-
-# Install frontend dependencies
-cd src
-npm install
-
-# Install program dependencies
-cd ../program
-anchor build
-```
-
-### **Development**
-```bash
-# Start local Solana validator
-solana-test-validator
-
-# Deploy program (in program directory)
-anchor deploy
-
-# Start frontend (in src directory)
-npm run dev
-
-# Run enterprise audits
-npm run audit:security      # Comprehensive security audit
-npm run audit:performance   # Performance analysis
-npm run audit:deployment    # Pre-deployment validation
-npm run audit:all          # Run all audits
-```
-
-### **Environment Setup**
-```bash
-# src/.env.local
-NEXT_PUBLIC_SOLANA_NETWORK=devnet
-NEXT_PUBLIC_PROGRAM_ID=4Gd64thyhLeqyLxDz8Ae5Z98qXdqwJrcAYkS6g3Yzy5V
-NEXT_PUBLIC_USDC_MINT=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
-```
+### **Next Steps**
+1. **Study Documentation**: Review the complete [documentation suite](./docs/)
+2. **Understand Architecture**: Read [technical specifications](./docs/architecture/)
+3. **Follow Roadmap**: Check the [12-week development plan](./TODO.md)
+4. **Begin Development**: Start with Phase 2 implementation when ready
 
 ### **📊 Current Status**
 
@@ -220,30 +192,32 @@ NEXT_PUBLIC_USDC_MINT=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
 
 ---
 
-## 🔐 **Security Audits**
+## 🔐 **Security Framework**
 
-### **Smart Contract Security**
-- ✅ **Multiple Security Audits**: 7 comprehensive reviews completed
-- ✅ **Zero Critical Vulnerabilities**: All issues resolved
-- ✅ **Mainnet Ready**: Production deployment approved
-- ✅ **Continuous Monitoring**: Ongoing security assessments
+### **Planned Security Measures** *(Phase 2-3 Implementation)*
+- 📋 **Security Audits**: Professional third-party security reviews
+- 📋 **Vulnerability Testing**: Comprehensive penetration testing
+- 📋 **Code Reviews**: Multi-developer security validation
+- 📋 **Continuous Monitoring**: Ongoing security assessments
 
-### **Key Security Features**
+### **Planned Security Features**
 - **Authority Validation**: `has_one` constraints on all privileged functions
 - **Overflow Protection**: `checked_add/sub/mul/div` throughout
-- **Reentrancy Prevention**: Proper account constraints
+- **Reentrancy Prevention**: Proper account constraints  
 - **State Management**: Secure market state transitions
+
+*See [Security Documentation](./docs/security/) for complete security specifications*
 
 ---
 
-## 💰 **Tokenomics & Revenue**
+## 💰 **Planned Tokenomics & Revenue**
 
-### **Current Model (V1.0)**
+### **Initial Model (V1.0)** *(Phase 2 Implementation)*
 - **No Platform Fees**: Pure peer-to-peer betting
-- **Swap Fees**: 0.3% on token conversions
+- **Swap Fees**: 0.3% on token conversions  
 - **Gas Optimization**: Minimal transaction costs
 
-### **Future Revenue Streams** (See [TODO.md](./TODO.md))
+### **Future Revenue Streams** *(Post-MVP)* (See [TODO.md](./TODO.md))
 - **Platform Fees**: 2-5% of betting pools
 - **Market Creation Fees**: Fixed amounts for market creation
 - **Premium Features**: Advanced analytics, priority support
